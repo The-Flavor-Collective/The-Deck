@@ -60,12 +60,12 @@ CREATE TABLE manos (
 
 create table usuarios
 (
-    usuario varchar(50) not null,
+    usuario varchar(50) not null unique,
     contra varchar(50) not null,
-    correo varchar(100) not null,
+    correo varchar(100) not null unique,
     ip varchar(50) not null,
+    verificado boolean not null,
     primary key (usuario)
-
 );
 
 create index manos_idx1 on manos (carta1, carta2, carta3, carta4, carta5, carta6, carta7, carta8, carta9, carta10, carta11, carta12, carta13, carta14, carta15, carta16, carta17, carta18, carta19, carta20, carta21, carta22, carta23, carta24, carta25, carta26);
